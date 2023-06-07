@@ -2,7 +2,7 @@
 
 using CommunityToolkit.HighPerformance.Helpers;
 
-var array = Enumerable.Range(1, 100).Select(x => x * x).ToArray();
+var array = Enumerable.Range(1, 10000).Select(x => x * x).ToArray();
 
 ParallelHelper.For(0, array.Length, new ArrayInitializer(array));
 
